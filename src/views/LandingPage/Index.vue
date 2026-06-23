@@ -1,8 +1,13 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import Announcement from '@/components/Announcement.vue'
+import LayananUtama from '@/components/landing/LayananUtama.vue'
+import BukuTamu from '@/components/landing/LayananUtama.vue'
+
 
 // State untuk input pencarian jika dibutuhkan nanti
 const searchTerm = ref('')
+
 
 // State untuk Pop-up Pengumuman Otomatis
 const isPopupOpen = ref(false)
@@ -19,6 +24,10 @@ onMounted(() => {
 
 <template>
   <div class="min-h-screen flex flex-col font-sans bg-gray-50">
+  <Announcement
+      :is-open="isPopupOpen" 
+      @close="isPopupOpen = false" 
+    />
     
     <div v-if="isPopupOpen" class="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div @click="closePopup" class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
@@ -110,40 +119,7 @@ onMounted(() => {
       </div>
     </section>
 
-    <section class="bg-gray-50 p-8 flex flex-wrap gap-6 justify-center">
-      <div class="relative w-72 h-[450px] bg-white rounded-2xl shadow-lg flex flex-col justify-between overflow-hidden border border-gray-100 p-6 pt-12">
-        <div class="absolute top-0 right-0 w-28 h-28 overflow-hidden pointer-events-none">
-          <div class="absolute bg-blue-600 text-white text-xs font-bold uppercase tracking-wider text-center py-1.5 w-40 top-6 -right-10 rotate-45 shadow-sm">
-            Gratis
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center flex-grow text-center">
-          <div class="w-20 h-20 bg-blue-950 rounded-full flex items-center justify-center text-white mb-5 shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-          </div>
-          <h3 class="text-blue-950 font-extrabold text-2xl mb-1">Perpustakaan</h3>
-          <div class="flex items-center justify-center gap-1.5 text-gray-500 font-bold text-sm mb-4">
-            <span>Layanan Umum</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-          </div>
-          <p class="text-gray-500 text-sm leading-relaxed px-2 text-justify md:text-center">
-            Publikasi statistik terbitan BPS dari berbagai kategori: kependudukan, sosial, sosial ekonomi, pertanian, dan lain-lain.
-          </p>
-        </div>
-
-        <div class="mt-6 text-center w-full">
-          <a href="https://pustaka.bps.go.id" target="_blank" class="inline-block text-blue-900 font-bold hover:text-blue-700 hover:underline transition-colors duration-200">
-            Cari Pustaka
-          </a>
-        </div>
-      </div>
-      
-      </section>
+    <LayananUtama />
 
     <section class="bg-gray-100 flex items-center justify-center px-6 py-12 md:px-16 lg:px-24 overflow-hidden pb-0">
       <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
