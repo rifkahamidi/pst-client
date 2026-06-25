@@ -71,7 +71,7 @@ onMounted(() => {
       </div>
     </nav>
 
-    <section class="bg-[#0A3981] text-white px-6 py-12 md:px-16 lg:px-24 flex items-center justify-center relative overflow-hidden">
+    <section class="bg-[#0A3981] text-white px-6 md:px-16 lg:px-24 flex items-center justify-center relative overflow-hidden h-[calc(100vh-72px)] min-h-[500px]">
       <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <div class="lg:col-span-6 space-y-6 max-w-2xl">
@@ -81,7 +81,7 @@ onMounted(() => {
           
           <p class="text-gray-200 text-sm md:text-base leading-relaxed font-light">
             Selamat datang di Pelayanan Statistik Terpadu BPS Kabupaten Kaimana. Di website ini Anda dapat menemukan berbagai layanan yang kami sediakan dan informasi kontak yang dapat dihubungi. <br>
-            <span class="font-normal">#MelayaniDenganHati 💖</span>
+            <span class="font-normal">#MelayaniDenganHati </span>
           </p>
           
           <div class="pt-4 space-y-2">
