@@ -2,12 +2,12 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'LandingFooter',
+  name: 'Footer',
 })
 </script>
 
 <template>
-  <footer class="bg-[#00337C] text-white py-4 px-10 md:px-16 lg:px-24">
+  <footer id="footer" class="bg-[#00337C] text-white py-4 px-10 md:px-16 lg:px-24">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
       <div class="space-y-6">
         <h2 class="text-3xl font-bold tracking-wide">Hubungi Kami</h2>

@@ -43,7 +43,7 @@ const layananList = ref([
 </script>
 
 <template>
-  <div class="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 font-sans">
+  <div id="layanan-utama" class="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 font-sans">
     <!-- Judul Section -->
     <div class="text-center mb-10">
       <h2 class="text-3xl sm:text-4xl font-semibold text-gray-800">Layanan Utama</h2>
